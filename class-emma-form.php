@@ -48,8 +48,8 @@ class Emma_Form {
 		if ( !empty($ajax_data) ) {
 			$_POST['emma_form_submit'] = 'yep';
 			$_POST['emma_email'] = $ajax_data['emma_email'];
-			$_POST['emma_firstname'] = $ajax_data['emma_firstname'];
-			$_POST['emma_lastname'] = $ajax_data['emma_lastname'];
+			if(isset($ajax_data['emma_firstname'])) $_POST['emma_firstname'] = $ajax_data['emma_firstname'];
+			if(isset($ajax_data['emma_lastname'])) $_POST['emma_lastname'] = $ajax_data['emma_lastname'];
 			$_POST['emma_signup_form_id'] = $ajax_data['emma_signup_form_id'];
 		}
 		

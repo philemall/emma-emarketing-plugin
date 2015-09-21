@@ -125,12 +125,7 @@ add_action( 'wp_ajax_emma_ajax_form_submit', 'emma_ajax_form_submit_callback' );
 add_action( 'wp_ajax_nopriv_emma_ajax_form_submit', 'emma_ajax_form_submit_callback' );
 
 function emma_ajax_form_submit_callback() {
-	
-	$emma_email = $_POST['emma_email'];
-	$emma_firstname = $_POST['emma_firstname'];
-	$emma_lastname = $_POST['emma_lastname'];
-	$emma_signup_form_id = $_POST['emma_signup_form_id'];
-	
+		
 	$emma_form = new Emma_Form();
 	$emma_form->generate_form($_POST);
 	
